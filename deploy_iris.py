@@ -16,7 +16,7 @@ class Item(BaseModel):
 # Define the main route
 @app.get('/')
 def root_route():
-    return { 'error': 'Use GET /prediction instead of the root route!' }
+    return {'Hello': 'World!'}
 
 
 def check_params(query_params):
