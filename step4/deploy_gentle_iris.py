@@ -1,3 +1,4 @@
+from time import sleep
 from fastapi import FastAPI, Request
 from pydantic import BaseModel
 from joblib import load
@@ -37,6 +38,10 @@ async def predict_route(req: Request):
         query_params["petallength"],
         query_params["petalwidth"],
     ]
+    clf2 = load('iris.p')
+    for i in range(100_000):
+        i / 433.9123
+    sleep(0.1)
     pred = clf2.predict([data])
     return {"data": pred}
 
