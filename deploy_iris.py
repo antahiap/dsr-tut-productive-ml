@@ -28,7 +28,7 @@ def check_params(query_params):
 
 # Define the /prediction route
 @app.get('/predict/', response_model=Prediction)
-async def predict_route(req: Request):
+def predict_route(req: Request):
     query_params = dict(req.query_params)
     check_params(query_params)
     data = [
@@ -43,6 +43,6 @@ async def predict_route(req: Request):
 
 # Define the /prediction route
 @app.post('/prediction/', response_model=Prediction)
-async def prediction_route(item: Item):
+def prediction_route(item: Item):
     pred = clf2.predict([item.data])
     return {"data": pred}
