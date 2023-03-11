@@ -5,4 +5,4 @@ class WebsiteUser(HttpUser):
 
     @task
     def attempt(self):
-        self.client.get("/predict/?sepallength=6.3&sepalwidth=2.5&petallength=4.9&petalwidth=1.5")
+        self.client.get("/predict?sepallength=6.3&sepalwidth=2.5&petallength=4.9&petalwidth=1.5")
