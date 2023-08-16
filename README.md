@@ -12,3 +12,6 @@ pip install step1/requirements.txt
 - end-to-end test, the whole functionality from user login to the end
 - integration test, connection of the front-end and back-end
 - regression test, new changes, updates, or fixes have not introduced any unintended side effects or broken existing functionality.
+
+## Document
+- [slides](https://markus-hinsche.github.io/tut-practical-aspects-of-ml/#1)

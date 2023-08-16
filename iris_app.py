@@ -4,6 +4,8 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
+clf = load('model/iris_hp_model.joblib')
+
 
 class Prediction(BaseModel):
     prediction: int 
@@ -25,7 +27,7 @@ def predict(req:Request):
     ]
 
     # call the model
-    clf = load('model/iris_hp_model.joblib')
     pred = clf.predict([data])
 
     return {'prediction': int(pred)}
+
